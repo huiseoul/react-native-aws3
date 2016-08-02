@@ -32,7 +32,9 @@ export class RNS3 {
       contentType: file.type
     });
 
-    let url = `https://${ options.bucket }.s3.amazonaws.com`;
+    // for china region
+    let url = `https://${ options.bucket }.s3.cn-north-1.amazonaws.com.cn`;
+    // let url = `https://${ options.bucket }.s3.amazonaws.com`;
     let method = "POST";
     let policy = S3Policy.generate(options);
 
